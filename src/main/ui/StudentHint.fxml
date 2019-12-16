@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="menu" stylesheets="@StudentHint.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.StudentHintController">
+   <center>
+      <VBox alignment="CENTER">
+          <Button fx:id="showAllStudentStudent" alignment="CENTER" onAction="#openShowAllStudentScene" prefHeight="58.0" prefWidth="251.0" styleClass="showAllStudent" text="1.Show all students" />
+         <Button fx:id="addStudent" alignment="CENTER" mnemonicParsing="false" onAction="#openAddStudentScene" prefHeight="58.0" prefWidth="247.0" styleClass="addStudent" text="2.Add student" />
+      
+          <Button fx:id="backToMenu" alignment="CENTER" onAction="#openMenuScene" prefHeight="58.0" prefWidth="246.0" styleClass="back" text="Back to Menu" />
+      
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <Label styleClass="title" text="Student Options" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

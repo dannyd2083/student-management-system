@@ -1,0 +1,79 @@
+@font-face {
+    font-family: SAORegular;
+    src: url("../../../../src/main/ui/SAORegular.ttf");
+}
+
+.menu {
+          -fx-font-size: 20px;
+          -fx-font-family: 'SAO UI TT';
+          -fx-background-image: url("TechC.jpg");
+          -fx-height:100%;
+          -fx-background-position: center;
+          -fx-background-repeat: no-repeat;
+          -fx-background-size: cover;
+      }
+
+.title {
+       -fx-font-size: 30px;
+}
+
+.manageStudent {
+    -fx-border: none;
+    -fx-background-color: #ffffff;
+    -fx-color: white;
+    -fx-padding: 16px 32px;
+    -fx-text-align: center;
+    -fx-font-size: 20px;
+    -fx-margin: 4px 2px;
+    -fx-opacity: 0.6;
+    -fx-transition: 0.3s;
+}
+
+.manageStudent:hover {
+    -fx-opacity: 0.8;
+}
+
+.manageCourse {
+-fx-border: none;
+    -fx-background-color: #ffffff;
+    -fx-color: white;
+    -fx-padding: 16px 32px;
+    -fx-text-align: center;
+    -fx-font-size: 20px;
+    -fx-margin: 4px 2px;
+    -fx-opacity: 0.6;
+    -fx-transition: 0.3s;
+}
+
+
+.manageCourse:hover {
+    -fx-opacity: 0.8;
+}
+
+.manageProf {
+-fx-border: none;
+    -fx-background-color: #ffffff;
+    -fx-color: white;
+    -fx-padding: 16px 32px;
+    -fx-text-align: center;
+    -fx-font-size: 20px;
+    -fx-margin: 4px 2px;
+    -fx-opacity: 0.6;
+    -fx-transition: 0.3s;
+}
+
+.manageProf:hover {
+    -fx-opacity: 0.8;
+}
+
+.studentLabel{
+ -fx-graphic: url("Student.png");
+}
+
+.courseLabel{
+ -fx-graphic: url("Course.png");
+}
+
+.profLabel{
+ -fx-graphic: url("Prof.png");
+}

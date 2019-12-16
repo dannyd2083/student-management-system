@@ -1,0 +1,1 @@
+{"Course List":[{"Professor List":[{"Department":"math","Work Number":12345,"Professor Name":"danny"},{"Department":"math","Work Number":112,"Professor Name":"peter"}],"Course Number":110,"Name":"cpsc"}]}

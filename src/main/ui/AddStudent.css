@@ -1,0 +1,40 @@
+@font-face {
+    font-family: SAORegular;
+    src: url("../../../../src/main/ui/SAORegular.ttf");
+}
+
+
+.menu {
+          -fx-font-size: 20px;
+          -fx-font-family: 'SAO UI TT';
+          -fx-background-image: url("TechC.jpg");
+          -fx-height:100%;
+          -fx-background-position: center;
+          -fx-background-repeat: no-repeat;
+          -fx-background-size: cover;
+      }
+
+.button {
+    -fx-border: none;
+    -fx-background-color: #ffffff;
+    -fx-color: white;
+    -fx-padding: 16px 32px;
+    -fx-text-align: center;
+    -fx-font-size: 20px;
+    -fx-margin: 4px 2px;
+    -fx-opacity: 0.6;
+    -fx-transition: 0.3s;
+}
+
+.button:hover {
+    -fx-opacity: 0.8;
+}
+
+.back{
+ -fx-graphic: url("back.png");
+}
+
+.add{
+ -fx-graphic: url("plus.png")
+}
+

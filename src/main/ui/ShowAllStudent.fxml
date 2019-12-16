@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="685.0" styleClass="menu" stylesheets="@ShowAllStudent.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ShowAllStudentController">
+   <right>
+      <TableView fx:id="studentCourseTableView" prefHeight="294.0" prefWidth="227.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="courseNameColumn" prefWidth="96.0" text="Course Name" />
+            <TableColumn fx:id="courseNumberColumn" prefWidth="109.0" text="Course Number" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </right>
+   <center>
+      <TableView fx:id="studentTableView" onMouseClicked="#openSelectedStudentCourseInformation" prefHeight="354.0" prefWidth="382.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="studentNameColumn" prefWidth="85.0" text="Name" />
+          <TableColumn fx:id="studentNumberColumn" prefWidth="91.0" text="Student Number" />
+            <TableColumn fx:id="studentStatusColumn" prefWidth="111.0" text="Status" />
+            <TableColumn fx:id="studentAgeColumn" prefWidth="65.0" text="Age" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="studentName" GridPane.columnIndex="1" />
+            <TextField fx:id="studentNumber" GridPane.columnIndex="3" />
+            <Label text="Student Name" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="     Student Number" GridPane.columnIndex="2" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="19.0" prefWidth="84.0" text="     Age" textAlignment="RIGHT" GridPane.columnIndex="4" />
+            <Label text="    Course Name" GridPane.rowIndex="1" />
+            <Label contentDisplay="RIGHT" text="     Course Number" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="addCourseButton" mnemonicParsing="false" onAction="#addCourse" styleClass="eAndAButton" text="Add" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField fx:id="courseName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="courseNumber" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="edit" mnemonicParsing="false" onAction="#editS" styleClass="eAndAButton" text="Edit" GridPane.columnIndex="6" />
+            <TextField fx:id="studentAge" GridPane.columnIndex="5" />
+         </children>
+      </GridPane>
+   </bottom>
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#deleteSelectStudent" prefHeight="23.0" prefWidth="117.0" styleClass="Button" text="delete student" />
+            <Button fx:id="back" mnemonicParsing="false" onAction="#openStudentHintScene" styleClass="Button" text="Back to menu" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

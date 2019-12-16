@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="683.0" prefWidth="672.0" styleClass="menu" stylesheets="@Menu.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MenuController">
+   <top>
+   
+                <Label fx:id="tittle" contentDisplay="CENTER" styleClass="title" text="Welcome to Student Management System 1.0" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox alignment="CENTER" BorderPane.alignment="BOTTOM_CENTER">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="141.0" styleClass="studentLabel" />
+                   <Button fx:id="manageStudent" onAction="#openStudentHintScene" prefHeight="58.0" prefWidth="177.0" styleClass="manageStudent" text="1.Student" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="141.0" styleClass="courseLabel" />
+                  <Button fx:id="manageCourse" mnemonicParsing="false" onAction="#openAllCoursesScene" prefHeight="58.0" prefWidth="177.0" styleClass="manageCourse" text="2.Course" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="141.0" styleClass="profLabel" />
+                  <Button fx:id="manageProf" mnemonicParsing="false" onAction="#openAllProfsScene" prefHeight="58.0" prefWidth="177.0" styleClass="manageProf" text="3.Professor" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER_LEFT" />
+   </left>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER_RIGHT" />
+   </right>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="BOTTOM_CENTER" />
+   </bottom>
+</BorderPane>

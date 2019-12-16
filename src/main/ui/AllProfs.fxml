@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="menu" stylesheets="@AllCoursesProfInformation.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AllProfsController">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="deleteProfButton" mnemonicParsing="false" onAction="#deleteSelectProf" styleClass="Button" text="delete Professor" />
+            <Button fx:id="back" mnemonicParsing="false" onAction="#openMenuScene" styleClass="Button" text="back to Menu" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="profTableView" onMouseClicked="#openSelectedProfInformation" prefHeight="313.0" prefWidth="279.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="profNameColumn" prefWidth="115.0" text="Professor Name" />
+          <TableColumn fx:id="profWorkNumberColumn" prefWidth="118.0" text="Work Number" />
+            <TableColumn fx:id="profDepartmentColumn" prefWidth="129.0" text="Department" />
+        </columns>
+      </TableView>
+   </center>
+   <right>
+      <TableView fx:id="courseTableView" prefHeight="313.0" prefWidth="237.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="courseNameColumn" prefWidth="112.0" text="Course Name" />
+          <TableColumn fx:id="courseNumberColumn" prefWidth="110.0" text="Course Number" />
+        </columns>
+      </TableView>
+   </right>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Professor Name" />
+            <Label text="Work Number" GridPane.columnIndex="2" />
+            <Label text="Department" GridPane.columnIndex="4" />
+            <TextField fx:id="profName" GridPane.columnIndex="1" />
+            <TextField fx:id="profWorkNumber" GridPane.columnIndex="3" />
+            <TextField fx:id="profDepartment" GridPane.columnIndex="5" />
+            <Button fx:id="editButton" mnemonicParsing="false" onAction="#edit" styleClass="eAndAButton" text="edit" GridPane.columnIndex="6" />
+            <Button fx:id="addProfButton" mnemonicParsing="false" onAction="#addProf" styleClass="eAndAButton" text="add" GridPane.columnIndex="7" />
+            <TextField fx:id="courseName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="courseNumber" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="Course Name" GridPane.rowIndex="1" />
+            <Label text="Course Number" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="addCourseButton" mnemonicParsing="false" onAction="#addCourse" styleClass="eAndAButton" text="add" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>
